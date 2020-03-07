@@ -87,12 +87,14 @@ app.post('/message', (req, res) => {
 app.post('/getDB', verifyUser, (req, res) => {
     db.on('value', function (snapshot) {
         res.send(snapshot.val())
+        db.off("value");
     })
 })
 
 app.post('/checkLogged', verifyUser, (req, res) => {
     db.on('value', function (snapshot) {
         res.send(snapshot.val())
+        db.off("value");
     })
 })
 
