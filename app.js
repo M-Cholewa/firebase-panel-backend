@@ -2,8 +2,10 @@ const express = require('express'),
     app = express(),
     port = parseInt(process.env.PORT, 10) || 8080,
     cors = require('cors'),
-    admin = require('firebase-admin')
-cookieParser = require('cookie-parser');
+    admin = require('firebase-admin'),
+    fs = require('fs'),
+    multer = require('multer'),
+    cookieParser = require('cookie-parser');
 
 
 admin.initializeApp({
@@ -86,16 +88,53 @@ app.post('/message', (req, res) => {
 
 app.post('/getDB', verifyUser, (req, res) => {
     db.on('value', function (snapshot) {
-        res.send(snapshot.val())
+        res.status(200).send(snapshot.val())
         db.off("value");
     })
 })
+// var upload = multer({
+//     dest: 'uploads/',
+// })
+var bucket = admin.storage().bucket('gterenowa.appspot.com')
+// console.log(bucket)
+
+var upload = multer({ dest: 'uploads/', })
+// var upload = multer({ storage: multer.memoryStorage() })
+app.post('/submitForm', verifyUser, upload.single('image'), (req, res) => {
+    if (req.file) {
+        if (req.file.mimetype.includes('image/')) {
+            const options = {
+                destination: "cc." + "jpg",
+                resumable: true,
+                validation: 'crc32c',
+                metadata: {
+                    contentType: req.file.mimetype,
+                }
+            };
+            bucket.upload('uploads/' + req.file.filename, options, function (err, file) {
+                if (err)
+                    res.status(422).send(err)
+                console.log('Uploaded a blob or file!');
+                fs.unlink('uploads/' + req.file.filename, function (err) {
+                    if (err) throw err;
+                    console.log('File deleted!');
+                });
+            });
+            res.status(200).send('Wysłano pomyślnie')
+        }
+        else {
+            res.status(422).send('Nieprawidlowy format. Musi byc obrazek')
+        }
+    } else {
+        res.status(200).send('Wysłano pomyślnie bez obrazka')
+
+    }
+
+
+})
 
 app.post('/checkLogged', verifyUser, (req, res) => {
-    db.on('value', function (snapshot) {
-        res.send(snapshot.val())
-        db.off("value");
-    })
+    res.status(200).send('logged in successfully')
 })
 
 const sendMessage = (title, message) => {

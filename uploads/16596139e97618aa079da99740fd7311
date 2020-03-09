@@ -1,0 +1,80 @@
+{
+  "zadanie" : [ null, {
+    "czyWymagane" : true,
+    "dobreOdpowiedzi" : [ "sokol 1897", "1897 sokol" ],
+    "lokalizacjaDl" : 20.427973,
+    "lokalizacjaSzer" : 49.969239,
+    "podpisObrazka" : "Gen. Jan Henryk Dąbrowski, fot. I. Krieger, ze zbiorów Muzeum Krakowa",
+    "podtytul" : "podtytul 1 zadania",
+    "trescZadania" : "Odszukaj wspomnianą tablicę w jednej z naw bocznych Bazyliki św. Mikołaja. Odczytaj nazwę stowarzyszenia i rok fundacji tablicy. Pamiętaj, że wchodzisz do miejsca kultu. Na czas przebywania w bazylice schowaj telefon.",
+    "tytul" : "Rozbiory",
+    "urlZdjeciaDoZadania" : "https://firebasestorage.googleapis.com/v0/b/gterenowa.appspot.com/o/1.jpg?alt=media&token=022113f9-9284-4c80-94a4-fc3819993d96",
+    "wprowadzenieDoZadania" : "W 1795 r. w wyniku trzeciego rozbioru Polska zniknęła z mapy Europy. Bochnia pod austriackim zaborem znalazła się jednak już po pierwszym rozbiorze w 1772 r. Utrata niepodległości budziła chęć walki o wolność. Jednym z jej pierwszych przejawów była działalność Legionów Polskich we Włoszech. Ich twórca - gen. Jan Henryk Dąbrowski urodził się w Pierzchowie niedaleko Bochni. W najstarszym bocheńskim kościele – bazylice św. Mikołaja znajduje się tablica poświęcona twórcy Legionów."
+  }, {
+    "czyWymagane" : true,
+    "dobreOdpowiedzi" : [ "Kazimierz" ],
+    "lokalizacjaDl" : 20.425022,
+    "lokalizacjaSzer" : 49.973407,
+    "podpisObrazka" : "Cmentarz wojenny nr 314 Bochnia, zbiory prywatne.",
+    "podtytul" : "podtytul 2 zzadania",
+    "trescZadania" : "Odszukaj grób ofiar rabacji na cmentarzu przy ul. Orackiej. Jakie drugie imię nosiła ostatnia z wymienionych osób?",
+    "tytul" : "Rabacja",
+    "urlZdjeciaDoZadania" : "https://firebasestorage.googleapis.com/v0/b/gterenowa.appspot.com/o/2.jpg?alt=media&token=dab5a381-4d7c-4428-9872-895ca6b018bd",
+    "wprowadzenieDoZadania" : "Gospodarka I Rzeczypospolitej opierała się w dużej mierze na pracy pańszczyźnianych chłopów. Po upadku Polski zaborcy nie rozwiązali od razu problemu pańszczyzny, ponieważ powodował on napięcia między szlachtą a chłopstwem, a to akurat było korzystne z punktu widzenia obcych władz. Szczególnie silne napięcia między wsią a dworem występowały w zaborze austriackim, czyli w Galicji. W 1846 r. kiedy szlachta ogłosiła wybuch powstania (powstanie krakowskie), Austriacy podburzyli przeciwko niej chłopów, doprowadzając do licznych napadów na dwory i mordowania szlachty przez włościan. Wydarzenia te zostały nazwane rabacją galicyjską. Rabacja dotknęła również szlachtę Bocheńszczyzny. Na cmentarzu komunalnym przy ul. Orackiej w Bochni znajduje się zbiorowa mogiła 21 ofiar tych wydarzeń."
+  }, {
+    "czyWymagane" : true,
+    "dobreOdpowiedzi" : [ "Sedrak Warłonow", "Warłonow Sedrak" ],
+    "lokalizacjaDl" : 20.423318,
+    "lokalizacjaSzer" : 49.973842,
+    "podpisObrazka" : "Rzeż galicyjska, Jan Lewicki, domena publiczna",
+    "podtytul" : "podtytul 3 zadania",
+    "trescZadania" : "Na terenie wojennej części cmentarza przy ul. Orackiej odnajdź imię i nazwisko rosyjskiego żołnierza, który zmarł 14.01.1917 r.",
+    "tytul" : "I wojna światowa",
+    "urlZdjeciaDoZadania" : "https://firebasestorage.googleapis.com/v0/b/gterenowa.appspot.com/o/3.jpg?alt=media&token=9ea1eba9-2c2c-4e54-8b2f-9c77a02269da",
+    "wprowadzenieDoZadania" : "W 1914 r. rozpoczęła się I wojna światowa, w której zaborcy stanęli przeciwko sobie: Niemcy i Austro-Węgry przeciw Rosji. Początek wojny był na terenie Galicji pomyślny dla Rosjan. 26 listopada 1914 r. rosyjscy żołnierze prowadzący ofensywę przeciwko armii austriackiej w kierunku Krakowa weszli do Bochni. Okupacja miasta trwała do 15 grudnia 1914 r., kiedy to Rosjanie zostali zmuszeni do odwrotu na skutek przeprowadzonej przez wojska niemiecko- austriackie operacji limanowsko-łapanowskiej. Pamiątkami tych walk są rozsiane po wielu miejscowościach południowej części powiatu bocheńskiego cmentarze, na których pochowano poległych zarówno z armii autsriackiej (a wśród nich również osoby z polskimi nazwiskami) i niemieckiej, jak i rosyjskiej. Groby rosyjskich żołnierzy łatwo rozpoznać po charakterystycznych krzyżach. Kwatera z okresu I wojny światowej znajduje się również na cmentarzu przy ulicy Orackiej w Bochni. Pochowano na nim żołnierzy poległych w walkach, oraz zmarłych z ran w całym okresie wielkiej wojny."
+  }, {
+    "czyWymagane" : false,
+    "dobreOdpowiedzi" : [ "Ignacy Budzik", "Budzik Ignacy" ],
+    "lokalizacjaDl" : 20.424154,
+    "lokalizacjaSzer" : 49.968546,
+    "podpisObrazka" : "Obecne I Liceum ogólnokształcące w Bochni, fot. N. Krieger, ze zbiorów Muzeum Krakowa",
+    "podtytul" : "podtytul 4 zadania",
+    "trescZadania" : "Udaj się do westybulu I LO i odszukaj na tablicy imię i nazwisko ostatniego z wymienionych profesorów poległych w okresie 1914-20. Jeżeli frontowe drzwi do budynku szkoły są zamknięte spróbuj wejść drzwiami tylnymi (od strony parkingu). Jeżeli szkoła jest zamknięta pomiń to zadanie i przejdź do kolejnego.",
+    "tytul" : "Z Bochni do Legionów 1",
+    "urlZdjeciaDoZadania" : "https://firebasestorage.googleapis.com/v0/b/gterenowa.appspot.com/o/4.jpg?alt=media&token=1f7943f7-eebc-4b7d-8a6c-2a3f0dd87a19",
+    "wprowadzenieDoZadania" : "Po uzyskaniu autonomii na przełomie lat 60 i 70. XIX w. Galicja stała się jedynym zaborem, w którym bez skrępowania mogła się rozwijać polska kultura, nauka, ale także działalność polityczna. Na przełomie XIX i XX w. w Galicji zaczęły rozwijać się również organizacje paramilitarne łączące zainteresowanie kultura fizyczną z umiejętnościami i wiedzą wojskową. Do organizacji tego typu należały: Towarzystwo Gimnastyczne Sokół, Polskie Drużyny Strzeleckie, Związek Strzelecki czy Drużyny Bartoszowe. Mimo że organizacje te prowadziły działalność na pograniczu legalności Austriacy patrzyli na nie pobłażliwie, zdając sobie sprawę z tego, że w czasie konfliktu zbrojnego każda osoba  posiadająca wojskowe przeszkolenie może być cenna. Podobne organizacje działały również w Bochni. Jednym z miejsc ich tworzenia było Gimnazjum (obecnie I LO), którego młodzież garnęła się do tego typu działalności. Po wybuchu wojny Józef Piłsudski rozpoczął w porozumieniu z Austriakami formowanie Legionów Polskich, które u boku armii Habsburgów miały wziąć udział w walkach z Rosją. Wśród ochotników zaciągających się do Legionów duży odsetek stanowili uczniowie gimnazjów. Również spora grupa bocheńskich gimnazjalistów zgłosiła się do Legionów. Także część profesorów bocheńskiego gimnazjum wzięła udział w walkach na frontach I wojny światowej. Po wojnie w westybulu szkoły umieszczono tablicę upamiętniającą poległych w walkach uczniów i nauczycieli."
+  }, {
+    "czyWymagane" : true,
+    "dobreOdpowiedzi" : [ "Dom Bochniaków" ],
+    "lokalizacjaDl" : 20.430512,
+    "lokalizacjaSzer" : 49.969168,
+    "podpisObrazka" : "Rynek w Bochni, fot. S. Mucha, ze zbiorów MHK",
+    "podtytul" : "podtytul 5 zadania",
+    "trescZadania" : "Odszukaj przy Rynku siedzibę stowarzyszenia. Jaką nazwę nosi ta się kamienica?",
+    "tytul" : "Z Bochni do Legionów 2",
+    "urlZdjeciaDoZadania" : "https://firebasestorage.googleapis.com/v0/b/gterenowa.appspot.com/o/5.jpg?alt=media&token=20d1e272-51a9-44c6-8a9f-daef844fe2a4",
+    "wprowadzenieDoZadania" : "    Udział sporej grupy uczniów bocheńskiego gimnazjum w walkach na frontach I wojny     światowej w oddziałach Legionów Piłsudskiego zaowocował utworzeniem w latach 30.     istniejącego do dziś Stowarzyszenia Bochniaków. W jego hymnie – Kantacie Bochniaków –     znajduje się również odwołanie do tych wydarzeń:      <blockquote>         <p><br>             Gdy Polska rwała swe kajdany<br>             W Legiony z Bochni ruszył huf<br>             Na bój za wolność, śmierć i rany<br>             By naród wolnym czuł się znów.<br>             Niech smutne świadczą dziś mogiły<br>             Trzysta sześćdziesiąt ległych ciał<br>             Że każdy z nas swe młode siły<br>             I krew serdeczną Polsce dał         </p>     </blockquote>"
+  }, {
+    "czyWymagane" : true,
+    "dobreOdpowiedzi" : [ "3" ],
+    "lokalizacjaDl" : 20.422977,
+    "lokalizacjaSzer" : 49.966922,
+    "podpisObrazka" : "Żołnierze z batalionu zapasowego 32 pułku strzelców obrony krajowej w koszarach w Bochni - 10 maja 1918 r. Zbiory Fotopolska.eu",
+    "podtytul" : "podtytul 6 zadania",
+    "trescZadania" : "Udaj się na ulicę Krakowską. Odszukaj numer szkoły, która mieści się w dawny budynku koszar.",
+    "tytul" : "Wyzwolenie",
+    "urlZdjeciaDoZadania" : "https://firebasestorage.googleapis.com/v0/b/gterenowa.appspot.com/o/6.jpg?alt=media&token=3f76c791-b57c-4bee-9edc-9a9d630a8ca5",
+    "wprowadzenieDoZadania" : "    Jesienią 1918 r. I wojna światowa dobiegała końca. Już wcześniej (w marcu 1918 r.) wojnę przegrał jeden z zaborców     – Rosja, a teraz kapitulowały Niemcy i Austro-Węgry. Klęska wszystkich zaborców oznaczała spełnienie się marzeń     Polaków o niepodległości. W 1918 r. w Bochni wojsko austriackie stacjonowało w dwóch lokalizacjach. Posterunek     wojskowy umieszczony był na Rynku, natomiast oddziały tzw. Landwehry stacjonowały w koszarach w budynku przy obecnej     ulicy Krakowskiej. 31 października 1918 r. polskie oddziały złożone głównie z członków Polskiej Organizacji     Wojskowej pod komendą Feliksa Jędrychowskiego rozbroiły posterunek austriacki na Rynku. W tym samym czasie Polacy     służący w austriackim 32 pułku strzelców pod dowództwem Jerzego Dobrodzickiego opanowali koszary. Ponieważ załoga     koszar była wielonarodowa, Dobrodzicki pozwolił żołnierzom obcej narodowości rozejść się, natomiast Polacy pozostali     na wyznaczonych stanowiskach, a następnie podporządkowali się rozkazom Polskiej Komisji Likwidacyjnej. Jerzy     Dobrodzicki zaprzysiągł żołnierzy według następującej roty:     <blockquote>         <p><br>             Przyrzekam uroczyście, że jako żołnierz wolnej i niepodległej Polski będę rozkazów moich <br>             przełożonych bezwzględnie słuchał, we wszystkim ich wspierał i zachowywał <br>             się na służbie i poza służbą uczciwie i honorowo jak na polskiego żołnierza przystało.         </p>     </blockquote>"
+  }, {
+    "czyWymagane" : true,
+    "dobreOdpowiedzi" : [ "leg." ],
+    "lokalizacjaDl" : 20.427344,
+    "lokalizacjaSzer" : 49.97167,
+    "podpisObrazka" : "Pomnik Poległy za wolność 1914-20 w Bochni, zbiory prywatne",
+    "podtytul" : "podtytul 7 zadania",
+    "trescZadania" : "Jak na pomniku oznaczeni są byli legioniści?",
+    "tytul" : "Pamięć",
+    "urlZdjeciaDoZadania" : "https://firebasestorage.googleapis.com/v0/b/gterenowa.appspot.com/o/7.jpg?alt=media&token=452a2aab-4a2d-4418-8e62-bebcfa466f67",
+    "wprowadzenieDoZadania" : "W 1935 r. wybudowano w Bochni pomnik Poległym za wolność w latach 1914-20. Na pomniku umieszczono tablice z nazwiskami osób pochodzących z bocheńszczyzny, które poległy na polach bitew pierwszej wojny światowej, w walkach polsko-ukraińskich o Lwów, wojnie polsko-bolszewickiej. Wielu z tych żołnierz służyło w Legionach Józefa Piłsudskiego."
+  } ]
+}
