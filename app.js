@@ -101,10 +101,13 @@ var bucket = admin.storage().bucket('gterenowa.appspot.com')
 var upload = multer({ dest: 'uploads/', })
 // var upload = multer({ storage: multer.memoryStorage() })
 app.post('/submitForm', verifyUser, upload.single('image'), (req, res) => {
+    let key = req.body.key
+    console.log(key + " KEY")
+    console.log(JSON.parse(req.body.dobreOdpowiedzi) + " odpowiedzi")
     if (req.file) {
         if (req.file.mimetype.includes('image/')) {
             const options = {
-                destination: "cc." + "jpg",
+                destination: "game_imgs/" + key + ".jpg",
                 resumable: true,
                 validation: 'crc32c',
                 metadata: {
@@ -112,30 +115,81 @@ app.post('/submitForm', verifyUser, upload.single('image'), (req, res) => {
                 }
             };
             bucket.upload('uploads/' + req.file.filename, options, function (err, file) {
+                // console.log(file.metadata.mediaLink)
                 if (err)
                     res.status(422).send(err)
+                else
+                    file.makePublic().then(function (data) {
+                        // console.log(file)
+                        console.log(file.metadata.mediaLink)
+                        updateDB(req.body, file.metadata.mediaLink, key)
+                            .then(response => {
+                                // console.log(response)
+                                res.status(200).send('Wysłano pomyślnie')
+                            })
+                            .catch(err => {
+                                res.status(500).send('Błąd serwera')
+
+                            })
+                        // console.log(data[0]);
+                    });
                 console.log('Uploaded a blob or file!');
+                // console.log('link: ');
                 fs.unlink('uploads/' + req.file.filename, function (err) {
                     if (err) throw err;
-                    console.log('File deleted!');
+                    // console.log('File deleted!');
                 });
             });
-            res.status(200).send('Wysłano pomyślnie')
         }
         else {
             res.status(422).send('Nieprawidlowy format. Musi byc obrazek')
         }
     } else {
-        res.status(200).send('Wysłano pomyślnie bez obrazka')
+        updateDB(req.body, null, key)
+            .then(() => {
+                // console.log(response)
+                res.status(200).send('Wysłano pomyślnie')
+            })
+            .catch(err => {
+                res.status(500).send('Błąd serwera')
+
+            })
+        // res.status(200).send('Wysłano pomyślnie bez obrazka')
 
     }
+})
 
-
+app.post('/removeTask', verifyUser, (req, res) => {
+    let key = req.body.key
+    admin.database().ref('zadanie/' + key).remove()
+        .then(() => {
+            res.status(200).send('usunieto')
+        })
+        .catch((err) => {
+            res.status(500).send('błąd servera')
+        })
 })
 
 app.post('/checkLogged', verifyUser, (req, res) => {
     res.status(200).send('logged in successfully')
 })
+
+const updateDB = (req, imgLink, key) => {
+    let czyWymagane = Boolean(req.czyWymagane)
+    let dobreOdpowiedzi = JSON.parse(req.dobreOdpowiedzi)
+    let lokalizacjaDl = Number(req.lokalizacjaDl)
+    let lokalizacjaSzer = Number(req.lokalizacjaSzer)
+    let podpisObrazka = req.podpisObrazka
+    let podtytul = req.podtytul
+    let trescZadania = req.trescZadania
+    let wprowadzenieDoZadania = req.wprowadzenieDoZadania
+    let tytul = req.tytul
+    let urlZdjeciaDoZadania = imgLink ? imgLink : req.image
+    console.log("URL: " + urlZdjeciaDoZadania)
+    return admin.database().ref('zadanie/' + key).set({
+        czyWymagane, dobreOdpowiedzi, lokalizacjaDl, lokalizacjaSzer, podpisObrazka, podtytul, trescZadania, tytul, urlZdjeciaDoZadania, wprowadzenieDoZadania
+    });
+}
 
 const sendMessage = (title, message) => {
     let content = {
