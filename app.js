@@ -102,8 +102,8 @@ var upload = multer({ dest: 'uploads/', })
 // var upload = multer({ storage: multer.memoryStorage() })
 app.post('/submitForm', verifyUser, upload.single('image'), (req, res) => {
     let key = req.body.key
-    console.log(key + " KEY")
-    console.log(JSON.parse(req.body.dobreOdpowiedzi) + " odpowiedzi")
+    // console.log(key + " KEY")
+    // console.log(JSON.parse(req.body.dobreOdpowiedzi) + " odpowiedzi")
     if (req.file) {
         if (req.file.mimetype.includes('image/')) {
             const options = {
@@ -133,7 +133,7 @@ app.post('/submitForm', verifyUser, upload.single('image'), (req, res) => {
                             })
                         // console.log(data[0]);
                     });
-                console.log('Uploaded a blob or file!');
+                // console.log('Uploaded a blob or file!');
                 // console.log('link: ');
                 fs.unlink('uploads/' + req.file.filename, function (err) {
                     if (err) throw err;
@@ -185,7 +185,7 @@ const updateDB = (req, imgLink, key) => {
     let wprowadzenieDoZadania = req.wprowadzenieDoZadania
     let tytul = req.tytul
     let urlZdjeciaDoZadania = imgLink ? imgLink : req.image
-    console.log("URL: " + urlZdjeciaDoZadania)
+    // console.log("URL: " + urlZdjeciaDoZadania)
     return admin.database().ref('zadanie/' + key).set({
         czyWymagane, dobreOdpowiedzi, lokalizacjaDl, lokalizacjaSzer, podpisObrazka, podtytul, trescZadania, tytul, urlZdjeciaDoZadania, wprowadzenieDoZadania
     });
