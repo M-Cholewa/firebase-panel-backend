@@ -11,11 +11,12 @@
   "dependencies": {
     "cookie-parser": "^1.4.4",
     "cors": "^2.8.5",
-    "csurf": "^1.10.0",
-    "express": "^4.16.4",
-    "firebase": "^7.10.0",
-    "firebase-admin": "^7.3.0",
+    "csurf": "^1.11.0",
+    "express": "^4.17.1",
+    "firebase": "^7.11.0",
+    "firebase-admin": "^7.4.0",
     "multer": "^1.4.2",
-    "nodemon": "^1.18.11"
+    "nodemon": "^1.19.4",
+    "validate.js": "^0.13.1"
   }
 }
