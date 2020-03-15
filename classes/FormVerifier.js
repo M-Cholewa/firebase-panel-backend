@@ -8,29 +8,35 @@ module.exports = verifyForm = (req, res, next) => {
         if (err)
             res.status(500).send(err.message)
         else {
-            let czyWymagane = Boolean(req.body.czyWymagane)
-            let dobreOdpowiedzi = JSON.parse(req.body.dobreOdpowiedzi)
-            let lokalizacjaDl = Number(req.body.lokalizacjaDl)
-            let lokalizacjaSzer = Number(req.body.lokalizacjaSzer)
-            let podpisObrazka = req.body.podpisObrazka
-            let podtytul = req.body.podtytul
-            let trescZadania = req.body.trescZadania
-            let wprowadzenieDoZadania = req.body.wprowadzenieDoZadania
-            let tytul = req.body.tytul
+            try {
+                let czyWymagane = Boolean(req.body.czyWymagane)
+                let dobreOdpowiedzi = JSON.parse(req.body.dobreOdpowiedzi)
+                let lokalizacjaDl = Number(req.body.lokalizacjaDl)
+                let lokalizacjaSzer = Number(req.body.lokalizacjaSzer)
+                let podpisObrazka = req.body.podpisObrazka
+                let podtytul = req.body.podtytul
+                let trescZadania = req.body.trescZadania
+                let wprowadzenieDoZadania = req.body.wprowadzenieDoZadania
+                let tytul = req.body.tytul
+                let form = {
+                    czyWymagane, dobreOdpowiedzi, lokalizacjaDl, lokalizacjaSzer,
+                    podpisObrazka, podtytul, trescZadania, wprowadzenieDoZadania, tytul
+                }
+
+                let resValidate = validate(form, constraints, { format: "flat" })
+                if (resValidate) {
+                    res.status(422).send(resValidate)
+                    return
+                }
+
+                res.locals.form = form
+                next()
+            } catch (error) {
+                res.status(422).send('Wystąpił błąd z podanymi danymi')
+            }
+
             // let urlZdjeciaDoZadania = imgLink ? imgLink : req.body.image
-            let form = {
-                czyWymagane, dobreOdpowiedzi, lokalizacjaDl, lokalizacjaSzer,
-                podpisObrazka, podtytul, trescZadania, wprowadzenieDoZadania, tytul
-            }
 
-            let resValidate = validate(form, constraints, { format: "flat" })
-            if (resValidate) {
-                res.status(422).send(resValidate)
-                return
-            }
-
-            res.locals.form = form
-            next()
         }
     })
 }
@@ -81,6 +87,7 @@ const constraints = {
             message: "^Kazde zadanie musi mieć minimum 1 dobrą odpowiedź"
         }
     },
+    // key: stringType,
     lokalizacjaDl: numberType,
     lokalizacjaSzer: numberType,
     podtytul: stringType,
