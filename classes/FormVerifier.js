@@ -17,12 +17,14 @@ module.exports = verifyForm = (req, res, next) => {
                 let podtytul = req.body.podtytul
                 let trescZadania = req.body.trescZadania
                 let wprowadzenieDoZadania = req.body.wprowadzenieDoZadania
+                let kolejnoscZadania = Number(req.body.kolejnoscZadania)
                 let tytul = req.body.tytul
                 let form = {
                     czyWymagane, dobreOdpowiedzi, lokalizacjaDl, lokalizacjaSzer,
-                    podpisObrazka, podtytul, trescZadania, wprowadzenieDoZadania, tytul
+                    podpisObrazka, podtytul, trescZadania, wprowadzenieDoZadania, tytul,
+                    kolejnoscZadania
                 }
-
+                // console.log(lokalizacjaDl)
                 let resValidate = validate(form, constraints, { format: "flat" })
                 if (resValidate) {
                     res.status(422).send(resValidate)
@@ -34,9 +36,6 @@ module.exports = verifyForm = (req, res, next) => {
             } catch (error) {
                 res.status(422).send('Wystąpił błąd z podanymi danymi')
             }
-
-            // let urlZdjeciaDoZadania = imgLink ? imgLink : req.body.image
-
         }
     })
 }
@@ -44,21 +43,21 @@ module.exports = verifyForm = (req, res, next) => {
 const stringType = {
     presence: {
         presence: true,
-        message: "nie podano żadnej wartości"
+        message: "nie podano żadnej wartości "
     },
     type: {
         type: "string",
-        message: "zły typ danych"
+        message: "zły typ danych "
     },
 }
 const numberType = {
     presence: {
         presence: true,
-        message: "nie podano żadnej wartości"
+        message: "nie podano żadnej wartości "
     },
     type: {
         type: "number",
-        message: "zły typ danych"
+        message: "zły typ danych "
     },
 }
 
@@ -66,30 +65,60 @@ const constraints = {
     czyWymagane: {
         presence: {
             presence: true,
-            message: "^Nie podano czy zadanie jest wymagane"
+            message: "^Nie podano czy zadanie jest wymagane "
         },
         type: {
             type: "boolean",
-            message: "zły typ danych"
+            message: "zły typ danych "
         }
     },
     dobreOdpowiedzi: {
         presence: {
             presence: true,
-            message: "^Nie podano żadnej dobrej odpowiedzi"
+            message: "^Nie podano żadnej dobrej odpowiedzi "
         },
         type: {
             type: "array",
-            message: "zły typ danych"
+            message: "zły typ danych "
         },
         length: {
             minimum: 1,
-            message: "^Kazde zadanie musi mieć minimum 1 dobrą odpowiedź"
+            message: "^Kazde zadanie musi mieć minimum 1 dobrą odpowiedź "
         }
     },
-    // key: stringType,
-    lokalizacjaDl: numberType,
-    lokalizacjaSzer: numberType,
+    lokalizacjaDl: {
+        presence: {
+            presence: true,
+            message: "nie podano żadnej wartości "
+        },
+        type: {
+            type: "number",
+            message: "zły typ danych "
+        },
+        numericality: {
+            greaterThan: -180,
+            notGreaterThan: "minimum -180 ",
+            lessThan: 180,
+            notLessThan: "maximum 180 ",
+        }
+    },
+    lokalizacjaSzer: {
+        presence: {
+            presence: true,
+            message: "nie podano żadnej wartości "
+        },
+        type: {
+            type: "number",
+            message: "zły typ danych "
+        },
+        numericality: {
+            greaterThan: -85,
+            notGreaterThan: "minimum -85 ",
+            lessThan: 85,
+            notLessThan: "maximum 85 ",
+        }
+    },
+    kolejnoscZadania: numberType,
     podtytul: stringType,
     trescZadania: stringType,
     wprowadzenieDoZadania: stringType,

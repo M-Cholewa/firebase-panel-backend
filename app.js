@@ -1,4 +1,5 @@
 const express = require('express'),
+    admin = require('firebase-admin'),
     app = express(),
     port = parseInt(process.env.PORT, 10) || 8080,
     cookieParser = require('cookie-parser'),

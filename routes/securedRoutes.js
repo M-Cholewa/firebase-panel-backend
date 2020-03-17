@@ -10,7 +10,6 @@ admin.initializeApp({
     credential: admin.credential.cert('./gterenowa-firebase-adminsdk-8j2eo-a35fd741f5.json'),
     databaseURL: "https://gterenowa.firebaseio.com"
 });
-
 const bucket = admin.storage().bucket('gterenowa.appspot.com')
 const db = admin.database().ref('zadanie');
 const verifyUser = (req, res, next) => {
